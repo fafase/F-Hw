@@ -10,7 +10,7 @@ using UnityEngine.UI;
 /// </summary>
 public class ProductController : DisplayController
 {
-	protected override void Awake()
+	public override void Init()
 	{
 		this.m_container = new Container(this as IDisplay);
 		InvokeRepeating("RedrawCircleGfx", 1.0f,1.0f);

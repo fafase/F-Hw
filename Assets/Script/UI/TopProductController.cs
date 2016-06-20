@@ -8,6 +8,14 @@ public class TopProductController : MonoBehaviour
 {
 	public ActionTypeController [] m_actionTypeController;
 
+	public void Init()
+	{
+		foreach(ActionTypeController atc in this.m_actionTypeController)
+		{
+			atc.Init();
+		}
+	}
+
 	/// <summary>
 	/// When a new product is propagated, the product name is converted to a value (0 to 2).
 	/// The action name is converted to a value (0 to 10)

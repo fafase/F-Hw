@@ -18,7 +18,7 @@ namespace DataAnalytics
 		protected Container m_container = null;
 		public int Length {get{ return this.images.Length;} }
 
-		protected virtual void Awake()
+		public virtual void Init()
 		{
 			this.m_container = new Container(this as IDisplay);
 			InvokeRepeating("RedrawColumnGfx", 1.0f,1.0f);

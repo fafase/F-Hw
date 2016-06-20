@@ -19,7 +19,7 @@ public class InfoController : MonoBehaviour , IInfo
 
 	public void Init()
 	{
-		this.m_info = new InfoContainer(this as IInfo);
+		this.m_info = new InfoContainer();
 		InvokeRepeating("SetInfoGfx", 1.0f, 1.0f);
 	}
 
@@ -55,16 +55,15 @@ namespace DataAnalytics
 	[Serializable]
 	public class InfoContainer
 	{
-		private IInfo m_info = null;
 		private int m_duplicate = 0;
 		public int Duplicate{ get{ return this.m_duplicate; } }
 		private int m_eventProcessed = 0;
 		public int EventsProcessed { get { return this.m_eventProcessed;} }
 		private float m_progress = 0.0f;
 		public float Progress { get { return this.m_progress; } }
-		public InfoContainer(IInfo info)
+		public InfoContainer()
 		{
-			this.m_info = info;
+			
 		}
 
 		public void SetDuplicate()

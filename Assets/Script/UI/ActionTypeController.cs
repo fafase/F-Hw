@@ -12,7 +12,7 @@ public class ActionTypeController : DisplayController
 {
 	public Text [] m_texts;
 
-	protected override void Awake()
+	public override void Init()
 	{
 		this.m_container = new Container(this as IDisplay);
 		InvokeRepeating("RedrawColumnGfx", 1.0f,1.0f);

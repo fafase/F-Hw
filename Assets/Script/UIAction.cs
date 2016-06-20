@@ -50,6 +50,11 @@ public class UIAction : MonoBehaviour
 
 		SetPanelCollection();
 		SetInitialStateUI();
+
+		this.m_infoPanel.Init();
+		this.m_productPanel.Init();
+		this.m_topProdCtlr.Init();
+		this.m_dailyController.Init();
 	}
 		
 	/// <summary>
